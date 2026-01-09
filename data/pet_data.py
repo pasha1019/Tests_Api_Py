@@ -7,10 +7,10 @@ def generate_pet_data() -> dict:
     pet_id = random.randint(1000, 9999)
     category_id = random.randint(1000, 9999)
     return {
-        "id": pet_id,
+        "id": 0,
         "category": {
             "id": category_id,
-            "name": "Test_category"
+            "name": f'Test_category_{category_id}'
         },
     "name": f'Test_pet_{pet_id}',
     "photoUrls": [
