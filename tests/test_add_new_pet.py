@@ -1,7 +1,6 @@
 import allure
-import pytest
 from data.pet_data import generate_pet_data
-from api.base_api import PetStoreAPI
+from api.pet_api import PetAPI
 
 
 @allure.feature("POST /pet")
@@ -16,7 +15,7 @@ class TestPetPostStatus:
         возвращается статус код 200
         """
         # Arrange
-        api_client = PetStoreAPI()
+        api_client = PetAPI()
         pet_data = generate_pet_data()
 
         # Act

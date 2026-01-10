@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  autotests:
+    build: .
+    volumes:
+      - .:/app
+      - ./allure-results:/app/allure-results
+    working_dir: /app
+    # command: pytest --alluredir=/app/allure-results -v  # опционально
